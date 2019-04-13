@@ -1,12 +1,31 @@
 <timer>
   <p>
-    Hello from my timer component
+    Riot.js 4 Timer Component:
     <time>{ state.start }</time>
   </p>
 
   <style>
     :host {
-      color: MediumBlue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #222222;
+      font-family: Helvetica Neue, Helvetica, Arial;
+      font-size: 1.6rem;
+      padding: 1.6rem;
+      box-sizing: border-box;
+    }
+
+    p {
+      background: #1e1e22;
+      color: white;
+      border: 0.2rem solid #ff0044;
+      border-radius: 0.6rem;
+      padding: 1.6rem;
+      font-weight: 200;
+      text-align: center;
+      box-shadow: 0 0 1.2rem rgba( 0, 0, 0, 0.5);
     }
 
     time {
