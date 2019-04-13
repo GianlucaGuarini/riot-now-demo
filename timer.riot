@@ -1,0 +1,37 @@
+<timer>
+  <p>
+    Hello from my timer component
+    <time>{ state.start }</time>
+  </p>
+
+  <style>
+    :host {
+      color: MediumBlue;
+    }
+
+    time {
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    export default {
+      onBeforeMount(props) {
+        this.state = {
+          start: props.start || 0
+        }
+      },
+      onMounted() {
+        this.interval = setInterval(this.increase, 1000)
+      }
+      increase() {
+        this.update({
+          start: ++this.state.start
+        })
+      },
+      onUnmounted() {
+        clearInterval(this.interval)
+      }
+    }
+  </script>
+</timer>

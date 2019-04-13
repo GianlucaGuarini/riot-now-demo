@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "static-example",
+  "builds": [
+    { "src": "*.riot", "use": "@riotjs/now" }
+  ]
+}
